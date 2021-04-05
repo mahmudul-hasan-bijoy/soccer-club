@@ -1,0 +1,100 @@
+.top-header {
+	height: 4.5rem;
+	background-color: var(--secondary);
+	display: flex;
+	align-items: center;
+	@include respond (phone) {
+		display: none;
+	}
+	&__flex {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		a {
+			color: var(--grey);
+			font-size: 1.2rem;
+			text-transform: uppercase;
+		}
+	}
+	&__left	 {
+		display: flex;
+		gap: .5rem;
+		a {
+			font-size: 1.4rem;
+		}
+	}
+	&__right {
+		display: flex;
+		align-items: center;
+		gap: .5rem;
+	}
+	&__dropdown {
+		padding-right: .5rem;
+		border-right: 1px solid var(--grey);
+		.dropdown-item {
+			color: var(--grey);
+			&:hover {
+				color: var(--primary);
+			}
+		}
+		.btn.dropdown-toggle {
+			color: var(--grey);
+			border: none;
+			background-color: transparent;
+		}
+		.btn.dropdown-toggle:focus {
+			background-color: var(--grey);
+			color: var(--white);
+			border: none;
+			box-shadow: none;
+		}
+	}
+	&__account {
+		padding: 0 2rem;
+		&:hover {
+			color: var(--primary);
+		}
+	}
+	&__icon {
+		background-color: var(--light-white);
+		border-radius: var(--radius-3);
+		i {
+			padding: .8rem;
+			transition: .3s all;
+		}
+		&:hover {
+			color: var(--white);
+			transition: .3s all;
+			.fb {
+				background-color: var(--fb);
+			}
+			.twitter {
+				border-radius: var(--radius-3);
+				background-color: var(--twitter);
+			}
+			.ins {
+				border-radius: var(--radius-3);
+				background-image: var(--ins);
+			}
+			.lkdn {
+				border-radius: var(--radius-3);
+				background-color: var(--lkdn);
+			}
+			.youtube {
+				border-radius: var(--radius-3);
+				background-color: var(--youtube);
+			}
+		}
+	}
+	&__search {
+		padding: .8rem;
+		background-color: var(--light-white);
+		transition: .3s all;
+		border-radius: var(--radius-3);
+		&:hover {
+			transition: .3s all;
+			background-color: var(--primary);
+			color: var(--white);
+		}
+	}
+}

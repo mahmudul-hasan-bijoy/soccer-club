@@ -1,0 +1,48 @@
+.award {
+	background-image: var(--fixture-box);
+	//padding: 2rem 1.5rem;
+	height: 40rem;
+	width: 100%;
+	text-align: center;
+	border-radius: var(--radius-3);
+	& > * {
+		color: var(--white);
+	}
+	&__column {
+		@include respond (mini-tab) {
+			margin-top: 3rem;
+		}
+	}
+	&__title {
+		height: 5rem;
+		padding: 1.5rem 0;
+		font-size: 1.8rem;
+		@include respond (px-991) {
+			font-size: 1.6rem;
+		}
+		font-weight: 700;
+		text-transform: uppercase;
+		border-bottom: 1px solid var(--grey);
+	}
+	&__container {
+		height: 100%;
+		width: 100%;
+	}
+	&__slide {
+		height: 35rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		&-img {
+			height: 25rem;
+			width: 100%;
+			object-fit: contain;
+		}
+		&-title {
+			padding: 2rem 0;
+			background-color: rgba(#000000, .5);
+			border-bottom-left-radius: var(--radius-3);
+			border-bottom-right-radius: var(--radius-3);
+		}
+	}
+}

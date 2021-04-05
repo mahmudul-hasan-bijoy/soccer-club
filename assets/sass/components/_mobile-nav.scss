@@ -1,0 +1,65 @@
+.mobile-nav {
+	display: none;
+	@include respond (px-991) {
+		display: block;
+	}
+	&__bars {
+		color: var(--black);
+		font-size: 2rem;
+		cursor: pointer;
+	}
+	&__close {
+		position: absolute;
+		z-index: 10;
+		top: 0rem;
+		left: 21rem;
+		padding: .5rem 1rem;
+		background: rgba(#ffffff, .8);
+		color: var(--black);
+		&:hover {
+			color: var(--primary);
+		}
+	}
+	&__overlay {
+		width: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		justify-content: start;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: rgba(#20273F, 0.5);
+		z-index: 10;
+		overflow-x: hidden;
+		transition: .5s all;
+		&-content {
+			position: absolute;
+			display: inline-flex;
+			flex-direction: column;
+			padding: 3rem;
+			gap: 3rem;
+			overflow-y: scroll;
+			height: 100%;
+			padding-right: 10rem;
+			background-color: rgba(#20273F, 0.9);
+		}
+	}
+	&__a {
+		font-size: 1.8rem;
+		font-weight: 700;
+		color: var(--white);
+		&:hover {
+			color: var(--primary);
+		}
+	}
+	&__dropdown {
+		background: none;
+		.dropdown-item {
+			font-size: 1.4rem;
+			font-weight: 500;
+		}
+	}
+
+}

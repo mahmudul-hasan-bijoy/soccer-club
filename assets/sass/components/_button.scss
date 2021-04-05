@@ -1,0 +1,47 @@
+.button {
+	display: inline-block;
+	border-radius: var(--radius-3);
+	&__primary {
+		padding: .5rem 1rem;
+		background-color: var(--primary);
+		color: var(--white) !important;
+		position: relative;
+		z-index: 1;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			transition: .3s all;
+			background-color: var(--secondary);
+			border-radius: .3rem;
+			z-index: -1;
+		}
+		&:hover::after {
+			border-radius: var(--radius-3);
+			transition: .3s all;
+			width: 100%;
+			color: var(--white);
+			z-index: -1;
+		}
+	}
+	&__secondary {
+		padding: .2rem 1rem;
+		background-color: var(--white);
+		border: 1px solid var(--primary);
+		color: var(--black) !important;
+		text-transform: uppercase;
+	}
+	&__tertiary {
+		padding: .3rem 1rem;
+		border: 1px solid var(--primary);
+		color: var(--var-white);
+		&:hover {
+			background-color: var(--light-white-1);
+			border-color: var(--white);
+			color: var(--primary);
+		}
+	}
+}

@@ -1,0 +1,150 @@
+/*
+0px - 600px:	Phone
+600px - 900px:	Tablet portrait
+900px - 1200px:	Tablet landscape
+[1200-1800px] is where our normal style apply
+1800px + : Big Desktop
+
+$breakpoint argument choices:
+-phone
+-tab-port
+-tab-land
+-big-desktop
+
+ORDER: Base + Typography > Layout + Grid > Page Layout > Components;
+
+1em = 16px;
+*/
+*, html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+//CSS Variables
+:root {
+  --primary: #E81F3E;
+  --secondary: #20273F;
+
+  --black: #333333;
+  --light-black: #30374F;
+
+  --yellow: #FFCB05;
+
+  --fb: #4267B2;
+  --twitter: #1CB7EB;
+  --lkdn: #1686B0;
+  --youtube: #DC472E;
+  --ins: linear-gradient(#4860C4, #F65A62);
+
+  --grey: #7c859a;
+  --light-grey: rgba(124,133,154,.25);
+  --table-even: #f0f0f0; 
+
+  --white: #ffffff;
+  --dark-white: #dddddd;
+  --light-white-1: #FAFFEB;
+  --light-white: rgba(255,255,255,.05);
+
+  --fixture-box: linear-gradient(to right bottom, #353D54, #1F263E);
+  --squad-box: linear-gradient(to right bottom, #10183C 22%, #800A3C);
+  --squad-box-1: linear-gradient(to right bottom, #800A3C 22%, #10183C);
+
+  --opensans: Open Sans;
+  --roboto: Roboto;
+
+  --shadow-black: 0px 0px 20px 0px rgba(51,51,51,0.5);
+
+  --radius-3: .3rem;
+  --transition-3: .3s all;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Roboto', sasns-serif;
+  font-family: 'Open Sans', sasns-serif;
+  font-size: 1.6rem;
+  @include respond(big-desktop) {
+    font-size: 1.8rem;
+  }
+  @include respond(tab-land) {
+    font-size: 1.5rem;
+  }
+  @include respond(tab-port) {
+    font-size: 1.4rem;
+  }
+  @include respond(phone) {
+    font-size: 1.2rem;
+  }
+  box-sizing: border-box;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a,
+a:hover {
+  font-family: var(--opensans);
+  transition: .3s all;
+  text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--roboto);
+}
+p,span {
+  font-family: var(--opensans);
+}
+
+::selection {
+  background-color: var(--black);
+  color: var(--primary);
+}
+
+
+/**
+ * Simple fade transition,
+ */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out; 
+  -moz-transition: all 0.15s ease-out; 
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out; 
+  -moz-transition: all 0.15s ease-out; 
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}

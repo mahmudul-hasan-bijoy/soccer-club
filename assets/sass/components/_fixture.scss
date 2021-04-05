@@ -1,0 +1,126 @@
+.fixture {
+	height: 51rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	&__item {
+		background-image: var(--fixture-box);
+		height: 16rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 100%;
+		border-radius: var(--radius-3);
+	}
+	&__top {
+		height: 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-bottom: 1px solid var(--light-grey);
+		h4 {
+			padding: .5rem 0;
+			color: var(--white);
+			text-transform: uppercase;
+			text-align: center;
+			font-size: 1.4rem;
+			font-family: var(--opensans);
+		}
+	}
+	&__box {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		//border-radius: var(--radius-3);
+		&-content {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			gap: 1rem;
+			color: var(--white);
+		}
+	}
+	&__banner {
+			align-self: end;
+			padding-bottom: .5rem;
+		img {
+			//width: 70%;
+			width: 5rem;
+			height: 5rem;
+			object-fit: contain;
+			padding-bottom: .5rem;
+		}
+		&-name {
+			text-transform: uppercase;
+			font-family: var(--opensans);
+			font-size: 1.4rem;
+			font-weight: 600;
+		}
+	}
+	&__details {
+		& > * {
+			text-align: center;
+			font-size: 1.2rem;
+			font-family: var(--roboto);
+			font-weight: 300;
+			line-height: 1.8rem;
+		}
+		&-date {
+			text-transform: capitalize;
+		}
+		&-category,
+		&-time {
+			text-transform: uppercase;
+		}
+	}
+	&__bottom {
+		height: 4rem;
+		overflow: hidden;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-top: 1px solid var(--primary);
+		border-bottom-right-radius: var(--radius-3);
+		& > * {
+			text-align: center;
+			font-size: 1.4rem;
+			color: var(--white);
+		}
+		&-left {
+			flex: 60%;
+			padding: 1rem 0;
+			border-bottom-left-radius: var(--radius-3);
+			i {
+				padding-right: .5rem;
+			}
+		}
+		&-right {
+			flex: 40%;
+			padding: 1rem 0;
+			background-color: transparent;
+			border-bottom-right-radius: var(--radius-3);
+			transition: .5s all;
+			text-transform: capitalize;
+			animation: bg-animate 2.5s linear infinite;
+			&:hover {
+				border-bottom-right-radius: var(--radius-3);
+				animation: none;
+				background-color: var(--primary);
+				transition: .5s all;
+			}
+		}
+	}
+	&__venue {
+		font-size: 1.2rem;
+	}
+	&__tickets,
+	&__tickets:hover {
+		font-family: var(--opensans);
+		text-transform: capitalize;
+		color: var(--white);
+	}
+}

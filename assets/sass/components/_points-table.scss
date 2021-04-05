@@ -1,0 +1,52 @@
+.points-table {
+	@include respond (px-991) {
+		padding-top: 3rem;
+	}
+	&__box {
+		width: 100%;
+		height: 51rem;
+		border: .3rem solid var(--light-grey);
+		border-radius: var(--radius-3);
+	}
+	table {
+		width: 100% !important;
+		height: 100%;
+		//border: 1px solid var(--light-grey);
+		//border-radius: var(--radius-3);
+		//border-collapse: collapse;
+	}
+	td, th {
+		padding-top: 1rem !important;
+		padding-bottom: 1rem !important;
+		padding-left: .5rem !important;
+		padding-right: .5rem !important;
+		font-size: 1.2rem !important;
+		border: none !important;
+		font-family: var(--roboto);
+		text-transform: uppercase !important;
+	}
+	td {
+		color: var(--black) !important;
+		img {
+			width: 2.5rem;
+			height: 2.5rem;
+			object-fit: contain;
+			padding-right: .5rem;
+		}
+	}
+	tr {
+		&:hover {
+			background-color: var(--dark-white);
+		}
+	}
+	tr:nth-child(even) {
+		background-color: var(--table-even) !important;
+		&:hover {
+			background-color: var(--dark-white) !important;
+		}
+	}
+	tr:first-child {
+		background-color: var(--primary);
+		color: var(--white) !important;
+	}
+}

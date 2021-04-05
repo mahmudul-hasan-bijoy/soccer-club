@@ -1,0 +1,6 @@
+.three-column {
+	padding: 5rem 0 10rem 0;
+	@include respond (px-991) {
+		padding: 5rem 0;
+	}
+}
