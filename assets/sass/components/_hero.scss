@@ -56,7 +56,7 @@
 			right: 10%;
 			bottom: 0;
 			width: 30rem;
-			@include respond (mini-phone) {
+			@include respond (phone) {
 				width: 20rem;
 				bottom: 5rem;
 			}
@@ -75,7 +75,7 @@
 				right: 5%;
 			}
 			width: 50rem;
-			@include respond (mini-phone) {
+			@include respond (phone) {
 				right: 5%;
 				width: 28rem;
 				bottom: 5rem;

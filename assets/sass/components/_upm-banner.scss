@@ -1,0 +1,138 @@
+.upm-banner {
+	position: relative;
+	height: 70vh;
+	@include respond (mini-tab) {
+		padding-bottom: 12rem;
+		height: auto;
+	}
+	padding: 4rem 0;
+	background-image: url(../img/match-detailsbg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	&__title {
+		padding-bottom: 2rem;
+		h1 {
+			font-size: 2rem;
+			font-weight: 900;
+			color: var(--yellow);
+			text-transform: uppercase;
+			text-align: center;
+		}
+	}
+	&__teams {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding-top: 5rem;
+		@include respond (mini-tab) {
+			padding-top: 2.5rem;
+			flex-direction: column;
+			gap: 2rem;
+		}
+		gap: 4rem;
+		& > * {
+			color: var(--white);
+		}
+		img {
+			width: 10rem;
+			height: 10rem;
+			object-fit: contain;
+		}
+		&--left, &--right {
+			width: 70%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 2rem;
+			h2 {
+				font-family: var(--roboto);
+				font-size: 2.4rem;
+				font-weight: 900;
+				text-transform: uppercase;
+				@include respond (mini-phone) {
+					font-size: 2rem;
+				}
+			}
+			@include respond (mini-tab) {
+				flex-direction: column;
+				gap: 1rem;
+			}
+		}
+		&--meta {
+			width: 100%;
+			i {
+				color: var(--yellow);
+				padding-right: 1rem;
+				@include respond (mini-tab) {
+					padding-right: .5rem;
+				}
+			}
+			&-2 {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				padding: 3rem 0;
+				@include respond (px-991) {
+					flex-direction: column;
+					gap: 1rem;
+					padding-bottom: 2rem;
+				}
+				@include respond (mini-tab) {
+					flex-direction: row;
+					justify-content: center;
+					gap: 2rem;
+				}
+			}
+		}
+	}
+	&__vs {
+		padding: .5rem 1.5rem;
+		background-color: var(--primary);
+		border-radius: 1.5rem;
+	}
+	&__vs, &__date, &__time, &__venue {
+		font-family: var(--opensans);
+		font-size: 1.6rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		@include respond (mini-phone) {
+			font-size: 1.2rem;
+		}
+	}
+	&__countdown {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		border: 0;
+		background-color: rgba(#E81F3E, .3);
+		color: var(--white);
+		padding: 1.5rem;
+		.match__countdown-starts > div {
+			color: var(--white) !important;
+		}
+		.match__countdown-box > div {
+			&:not(:last-child) {
+				border-right: 1px solid var(--grey) !important;
+			}
+		}
+		#days, #hours, #minutes, #seconds {
+			@include respond (phone) {
+				font-size: 2rem;
+			}
+		}
+ 	}
+}
+.upm-squad {
+	padding: 7rem 0;
+	background-image: url(../img/hnewbg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	.squad__box-image {
+		animation: none;
+	}
+}

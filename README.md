@@ -5,10 +5,12 @@
 - Mutlipage Website
 - HTML5
 - CSS3
-- Ruby SASS/SCSS
 - Bootstrap 4
 - jQuery/JavaScript
+- Ruby SASS/SCSS
 - devDependencies: npm package
+- Infinite Animations
+- Sliders
 - Extended & Minified files
 
 [![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) [![Coverage Status](http://img.shields.io/coveralls/badges/badgerbadgerbadger.svg?style=flat-square)](https://coveralls.io/r/badges/badgerbadgerbadger) <a href="https://github.com/actions/setup-node/actions?query=workflow%3Abuild-test"><img alt="build-test status" src="https://github.com/actions/setup-node/workflows/build-test/badge.svg">

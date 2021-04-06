@@ -642,7 +642,7 @@ p, span {
   transition: .8s all;
 }
 
-@media only screen and (max-width: 23.375em) {
+@media only screen and (max-width: 37.5em) {
   .hero__slider-img-1 {
     width: 20rem;
     bottom: 5rem;
@@ -667,7 +667,7 @@ p, span {
   }
 }
 
-@media only screen and (max-width: 23.375em) {
+@media only screen and (max-width: 37.5em) {
   .hero__slider-img-2 {
     right: 5%;
     width: 28rem;
@@ -2118,6 +2118,185 @@ p, span {
 .tweet__footer-right span {
   font-size: 3rem;
   opacity: .5;
+}
+
+.upm-banner {
+  position: relative;
+  height: 70vh;
+  padding: 4rem 0;
+  background-image: url(../img/match-detailsbg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+@media only screen and (max-width: 47.9375em) {
+  .upm-banner {
+    padding-bottom: 12rem;
+    height: auto;
+  }
+}
+
+.upm-banner__title {
+  padding-bottom: 2rem;
+}
+
+.upm-banner__title h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--yellow);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.upm-banner__teams {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 5rem;
+  gap: 4rem;
+}
+
+@media only screen and (max-width: 47.9375em) {
+  .upm-banner__teams {
+    padding-top: 2.5rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.upm-banner__teams > * {
+  color: var(--white);
+}
+
+.upm-banner__teams img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+}
+
+.upm-banner__teams--left, .upm-banner__teams--right {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.upm-banner__teams--left h2, .upm-banner__teams--right h2 {
+  font-family: var(--roboto);
+  font-size: 2.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 23.375em) {
+  .upm-banner__teams--left h2, .upm-banner__teams--right h2 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 47.9375em) {
+  .upm-banner__teams--left, .upm-banner__teams--right {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.upm-banner__teams--meta {
+  width: 100%;
+}
+
+.upm-banner__teams--meta i {
+  color: var(--yellow);
+  padding-right: 1rem;
+}
+
+@media only screen and (max-width: 47.9375em) {
+  .upm-banner__teams--meta i {
+    padding-right: .5rem;
+  }
+}
+
+.upm-banner__teams--meta-2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0;
+}
+
+@media only screen and (max-width: 61.9375em) {
+  .upm-banner__teams--meta-2 {
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 47.9375em) {
+  .upm-banner__teams--meta-2 {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+.upm-banner__vs {
+  padding: .5rem 1.5rem;
+  background-color: var(--primary);
+  border-radius: 1.5rem;
+}
+
+.upm-banner__vs, .upm-banner__date, .upm-banner__time, .upm-banner__venue {
+  font-family: var(--opensans);
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 23.375em) {
+  .upm-banner__vs, .upm-banner__date, .upm-banner__time, .upm-banner__venue {
+    font-size: 1.2rem;
+  }
+}
+
+.upm-banner__countdown {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 0;
+  background-color: rgba(232, 31, 62, 0.3);
+  color: var(--white);
+  padding: 1.5rem;
+}
+
+.upm-banner__countdown .match__countdown-starts > div {
+  color: var(--white) !important;
+}
+
+.upm-banner__countdown .match__countdown-box > div:not(:last-child) {
+  border-right: 1px solid var(--grey) !important;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .upm-banner__countdown #days, .upm-banner__countdown #hours, .upm-banner__countdown #minutes, .upm-banner__countdown #seconds {
+    font-size: 2rem;
+  }
+}
+
+.upm-squad {
+  padding: 7rem 0;
+  background-image: url(../img/hnewbg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.upm-squad .squad__box-image {
+  animation: none;
 }
 
 .footer {
