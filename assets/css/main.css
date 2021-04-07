@@ -1,7 +1,7 @@
 /*
-0px - 600px:	Phone
-600px - 900px:	Tablet portrait
-900px - 1200px:	Tablet landscape
+0px - 600px:  Phone
+600px - 900px:  Tablet portrait
+900px - 1200px: Tablet landscape
 [1200-1800px] is where our normal style apply
 1800px + : Big Desktop
 
@@ -16,9 +16,9 @@ ORDER: Base + Typography > Layout + Grid > Page Layout > Components;
 1em = 16px;
 */
 /*
-0px - 600px:	Phone
-600px - 900px:	Tablet portrait
-900px - 1200px:	Tablet landscape
+0px - 600px:  Phone
+600px - 900px:  Tablet portrait
+900px - 1200px: Tablet landscape
 [1200-1800px] is where our normal style apply
 1800px + : Big Desktop
 
@@ -138,6 +138,11 @@ p, span {
   font-family: var(--opensans);
 }
 
+::-moz-selection {
+  background-color: var(--black);
+  color: var(--primary);
+}
+
 ::selection {
   background-color: var(--black);
   color: var(--primary);
@@ -148,8 +153,6 @@ p, span {
  */
 .mfp-fade.mfp-bg {
   opacity: 0;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
 
@@ -163,8 +166,6 @@ p, span {
 
 .mfp-fade.mfp-wrap .mfp-content {
   opacity: 0;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
 
@@ -260,6 +261,19 @@ p, span {
   color: var(--primary);
 }
 
+@-webkit-keyframes slide-left {
+  0% {
+    right: 20%;
+  }
+  50% {
+    right: 30%;
+  }
+  100% {
+    right: 35%;
+    transform: scale(1.2);
+  }
+}
+
 @keyframes slide-left {
   0% {
     right: 20%;
@@ -270,6 +284,18 @@ p, span {
   100% {
     right: 35%;
     transform: scale(1.2);
+  }
+}
+
+@-webkit-keyframes zoom-in-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -285,6 +311,18 @@ p, span {
   }
 }
 
+@-webkit-keyframes bg-animate {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: var(--primary);
+  }
+  100% {
+    background-color: var(--light-grey);
+  }
+}
+
 @keyframes bg-animate {
   0% {
     background-color: transparent;
@@ -294,6 +332,20 @@ p, span {
   }
   100% {
     background-color: var(--light-grey);
+  }
+}
+
+@-webkit-keyframes bubble {
+  0% {
+    outline-offset: 0rem;
+  }
+  50% {
+    outline-width: 3px;
+    outline-offset: .3rem;
+  }
+  100% {
+    outline-width: 5px;
+    outline-offset: .5rem;
   }
 }
 
@@ -634,11 +686,16 @@ p, span {
   right: 10%;
   bottom: 0;
   width: 30rem;
-  animation-name: slide-left;
-  animation-duration: 8s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: slide-left;
+          animation-name: slide-left;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   transition: .8s all;
 }
 
@@ -654,10 +711,14 @@ p, span {
   z-index: -1;
   right: 15%;
   width: 50rem;
-  animation-name: zoom-in-out;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: zoom-in-out;
+          animation-name: zoom-in-out;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   transition: .8s all;
 }
 
@@ -942,19 +1003,26 @@ p, span {
 }
 
 .match__team-banner {
-  align-self: end;
+  -ms-grid-row-align: end;
+      align-self: end;
 }
 
 .match__team-banner img {
   width: 8rem;
   height: 8rem;
-  object-fit: contain;
-  object-position: bottom;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: bottom;
+     object-position: bottom;
   transition: .5s all;
-  animation-name: zoom-in-out;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: zoom-in-out;
+          animation-name: zoom-in-out;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .match__team-name {
@@ -1082,14 +1150,16 @@ p, span {
 }
 
 .fixture__banner {
-  align-self: end;
+  -ms-grid-row-align: end;
+      align-self: end;
   padding-bottom: .5rem;
 }
 
 .fixture__banner img {
   width: 5rem;
   height: 5rem;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   padding-bottom: .5rem;
 }
 
@@ -1149,12 +1219,14 @@ p, span {
   border-bottom-right-radius: var(--radius-3);
   transition: .5s all;
   text-transform: capitalize;
-  animation: bg-animate 2.5s linear infinite;
+  -webkit-animation: bg-animate 2.5s linear infinite;
+          animation: bg-animate 2.5s linear infinite;
 }
 
 .fixture__bottom-right:hover {
   border-bottom-right-radius: var(--radius-3);
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
   background-color: var(--primary);
   transition: .5s all;
 }
@@ -1205,7 +1277,8 @@ p, span {
 .points-table td img {
   width: 2.5rem;
   height: 2.5rem;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   padding-right: .5rem;
 }
 
@@ -1312,7 +1385,8 @@ p, span {
 .news__box-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-left-radius: var(--radius-3);
   border-bottom-left-radius: var(--radius-3);
 }
@@ -1446,8 +1520,10 @@ p, span {
   border-top-right-radius: var(--radius-3);
   max-height: 17rem;
   width: 100%;
-  object-fit: cover;
-  object-position: bottom;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
   transition: var(--transition-3);
 }
 
@@ -1572,8 +1648,10 @@ p, span {
   border-radius: var(--radius-3);
   width: 100%;
   height: 30rem;
-  object-fit: cover;
-  object-position: bottom;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 
 .video__slide-content {
@@ -1590,7 +1668,8 @@ p, span {
 
 .video__slide-meta {
   margin-top: 2rem;
-  align-self: end;
+  -ms-grid-row-align: end;
+      align-self: end;
   background-color: var(--secondary);
 }
 
@@ -1620,7 +1699,8 @@ p, span {
   align-items: center;
   justify-content: center;
   outline: 2px solid var(--primary);
-  animation: bubble 3s linear infinite;
+  -webkit-animation: bubble 3s linear infinite;
+          animation: bubble 3s linear infinite;
 }
 
 .video__pagination .swiper-pagination-bullet {
@@ -1686,11 +1766,13 @@ p, span {
   height: 100%;
   width: 100%;
   flex: 40%;
-  align-self: end;
+  -ms-grid-row-align: end;
+      align-self: end;
   border-top-left-radius: var(--radius-3);
   border-bottom-left-radius: var(--radius-3);
   background-image: var(--squad-box);
-  animation: bg-roll 3s linear infinite;
+  -webkit-animation: bg-roll 3s linear infinite;
+          animation: bg-roll 3s linear infinite;
 }
 
 @media only screen and (max-width: 23.375em) {
@@ -1704,8 +1786,10 @@ p, span {
 .squad__box-image img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  object-position: top;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
   border-bottom-left-radius: var(--radius-3);
   border-top-left-radius: var(--radius-3);
 }
@@ -1803,6 +1887,18 @@ p, span {
   background-color: var(--primary);
 }
 
+@-webkit-keyframes bg-roll {
+  0% {
+    background-image: var(--squad-box);
+  }
+  50% {
+    background-image: var(--squad-box-1);
+  }
+  100% {
+    background-image: var(--squad-box);
+  }
+}
+
 @keyframes bg-roll {
   0% {
     background-image: var(--squad-box);
@@ -1890,8 +1986,10 @@ p, span {
 .shop__slide-img {
   height: 15rem;
   width: 100%;
-  object-fit: contain;
-  object-position: bottom;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 
 .shop__slide-content {
@@ -1982,7 +2080,8 @@ p, span {
 .award__slide-img {
   height: 25rem;
   width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .award__slide-title {
@@ -2174,7 +2273,8 @@ p, span {
 .upm-banner__teams img {
   width: 10rem;
   height: 10rem;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .upm-banner__teams--left, .upm-banner__teams--right {
@@ -2296,7 +2396,8 @@ p, span {
 }
 
 .upm-squad .squad__box-image {
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
 }
 
 .footer {
